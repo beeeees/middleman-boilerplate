@@ -53,14 +53,14 @@ This will run the Middleman build task and generate all of the necessary files. 
 
 Add the remote to your working copy:
 ```bash
-$ git remote add heroku git@heroku.com:flips-app.git
+$ git remote add heroku git@heroku.com:PROJECTNAME.git
 ```
 
 Ensure you have the remote added to your working copy:
 ```bash
 $ git remote -v
-heroku  git@heroku.com:flips-app.git (fetch)
-heroku  git@heroku.com:flips-app.git (push)
+heroku  git@heroku.com:PROJECTNAME.git (fetch)
+heroku  git@heroku.com:PROJECTNAME.git (push)
 
 ```
 
