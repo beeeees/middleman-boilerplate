@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+body { font-weight: 100;}
+
+h1 {
+  margin-bottom: 20px;
+  @media (min-width: $screen-md-min) {
+    font-size: 38px;
+  }
+}
+
+h2 {
+  letter-spacing: 1px;
+  color: $orange;
+  @media (min-width: $screen-sm-min) {
+    font-size: 45px;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @media (min-width: $screen-sm-min) {
+    font-size: 33px;
+  }
+}
+
+h4 {
+  @media (min-width: $screen-sm-min) {
+    font-size: 21px;
+  }
+}
+
+h5 {
+  font-weight: 500;
+  font-family: $font-family-sans-serif;
+}
+
+p {
+  font-weight: 100;
+  line-height: 1.2em;
+  margin: 15px 0;
+  font-size: 21px;
+  @media (min-width: $screen-md-min) {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+  &.small {
+    font-size: 17px;
+    @media (min-width: $screen-md-min) {
+      font-size: 21px;
+    }
+  }
+}
+
+ul,ol {margin-bottom: 0; }
+
+ul { list-style-type: none; padding: 0;}
+
+a:hover, a:active, a:focus, button:hover, button:focus, button:active {text-decoration: none; outline: 0;}
+
+
+/* ==========================================================================
+   Helper Classes
+   ========================================================================== */
+
+.white {background: #fff;}
+.gray-lighter {background: $gray-lighter;}
+.orange { background: $orange;}
+
+.centered { text-align: center; margin: 0 auto; float: none;}
+
+.full-width {
+  width: 100%;
+  float: left;
+}
+
+.vcentered {
+  position: relative;
+  top: 50%;
+  @include transform(translate(0,-50%));
+}
+
+.padding {
+  padding: 20px 0;
+  @media (min-width: $screen-md-min) {
+    padding: 40px 0;
+  }
+}
+
+.hidden { display: none; }
+
+.img-responsive.max { width: 100%;}
+
+.break {display: block; }
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+section {
+  padding: 40px 0;
+  @media (min-width: $screen-md-min) {
+    padding: 80px 0;
+  }
+}
+
+.container {
+  @media (max-width: $screen-xs-max) {
+    padding: 0 15px;
+  }
+}
+
+.img-responsive {
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  border-width: 2px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  box-shadow: none;
+  @include transition (background-color 0.25s, border-radius 0.35s ease-in-out);
+  @include button-size(12px, 20px  !important, 13px, $line-height-large !important, 0);
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
+  @media (min-width: $screen-md-min) {
+    @include button-size($padding-large-vertical, $padding-large-horizontal  !important, 18px, $line-height-base !important, 0);
+  }
+}
+
+.btn-primary.rounded {
+  text-transform: lowercase;
+  font-weight: 500;
+  @include button-size(12px, $padding-large-horizontal  !important, 18px, $line-height-base !important, 30px);
+  &:hover {
+    border-radius: 0;
+    @include transition (background-color 0.25s, border-radius 0.35s ease-in-out);
+  }
+}
+
+.btn-default:hover {
+  background: transparent;
+  color: $yellow !important;
+  border-radius: 60px;
+  @include transition (background-color 0.25s, border-radius 0.35s ease-in-out);
+}
+
+.btn-primary:hover {
+  background: $orange;
+  color: #fff !important;
+  border-radius: 60px;
+  @include transition (background-color 0.25s, border-radius 0.35s ease-in-out);
+}
+
+
