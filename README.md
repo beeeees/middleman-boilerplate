@@ -1,4 +1,4 @@
-# Flips App
+# Personal Middleman Boilerplate
 
 #### Includes:
 * Bootstrap 3
@@ -71,8 +71,3 @@ Use the following command to push to Heroku:
 $ git push heroku master
 
 ```
-
-## Project Contacts
-
-- Developer - [Bethany](https://github.com/beeeees)
-- [Steadfast Creative](http://steadfastcreative.com)
