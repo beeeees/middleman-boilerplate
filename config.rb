@@ -5,7 +5,7 @@
 # Change Compass configuration
 
 compass_config do |config|
-  config.output_style = :expanded
+  config.output_style = :nested
   config.sass_options = { :line_comments => false, :debug_info => false }
 end
 

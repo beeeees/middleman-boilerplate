@@ -2,7 +2,39 @@ $bootstrap-sass-asset-helper: false;
 @import "bootstrap/bootstrap";
 @import "../fonts/fontello/css/fontello.css";
 
-// Custom imports and Compass
+@mixin xs-max {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+
+/* ==========================================================================
+    Compass Helpers
+   ========================================================================== */
 
 @import 'compass/css3/transition';
 @import 'compass/css3/border-radius';
@@ -11,18 +43,18 @@ $bootstrap-sass-asset-helper: false;
 
 
 /* ==========================================================================
-   Flips Custom Styles
+    Custom Styles
    ========================================================================== */
 
-@import "partials/global";
-@import "partials/nav";
-@import "partials/home";
-@import "partials/contact";
-@import "partials/footer";
-@import "partials/popups";
+@import "sass/global";
 
-@media (min-width: $screen-sm-min) { }
+/* ==========================================================================
+     Partials
+   ========================================================================== */
 
-@media (min-width: $screen-md-min) { }
+@import "sass/partials";
 
-@media (min-width: $screen-lg-min) { }
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+@import "sass/pages";
