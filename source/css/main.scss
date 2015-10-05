@@ -1,6 +1,4 @@
-$bootstrap-sass-asset-helper: false;
-@import "bootstrap/bootstrap";
-@import "../fonts/fontello/css/fontello.css";
+@charset 'UTF-8';
 
 @mixin xs-max {
   @media (max-width: #{$screen-xs-max}) {
@@ -42,19 +40,36 @@ $bootstrap-sass-asset-helper: false;
 @import 'compass/css3/transform';
 
 
-/* ==========================================================================
-    Custom Styles
-   ========================================================================== */
+// 1. Vendors
+@import
+  'vendor/bootstrap/bootstrap';
 
-@import "sass/global";
+// 2. Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
 
-/* ==========================================================================
-     Partials
-   ========================================================================== */
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-@import "sass/partials";
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
 
-/* ==========================================================================
-   Pages
-   ========================================================================== */
-@import "sass/pages";
+// 5. Components
+@import
+  'components/buttons';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';

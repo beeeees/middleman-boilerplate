@@ -27,6 +27,9 @@ $ bundle
 
 This will install all the needed dependencies and gems listed in the `.Gemfile` to get you up and running with Middleman.
 
+## SASS Architecture
+
+Recommend following the [7-1 Pattern](http://sass-guidelin.es/#the-7-1-pattern) as necessary for the project. All SASS files are imported in the main.scss file. Bear in mind, some folders will not be needed for smaller sites.
 
 ## Running
 Since we are using Middleman, you need to run the server to view the page. Do do this run:
@@ -36,7 +39,7 @@ $ middleman
 ```
 
 ## Development
-You can customize the Bootstrap configuration by editing: `source/css/bootstrap/_bootstrap.scss` and `source/css/bootstrap/_variables.scss`
+You can customize the Bootstrap configuration by editing: `source/css/vendor/bootstrap/_bootstrap.scss` and `source/css/vendor/bootstrap/_variables.scss`
 This is the easiest way that I have found to quickly set up a static site with Bootstrap, Sass, Compass, and Middleman.
 
 ## Building/Deployment
